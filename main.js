@@ -5,23 +5,21 @@ $(document).ready(function() {
     $('#task-form').submit(function(event) {
         event.preventDefault(); 
 
+  
+        var task = $('#task-input').val().trim();
+
+   
+        if (task) {
        
-        var taskName = $('#task-input').val().trim();
+            $('#task-list').append('<li>' + task + '</li>');
 
-        
-        if (taskName !== '') {
-
-            var taskItem = $('<li>').text(taskName);
-
-
-            taskItem.click(function() {
-                $(this).toggleClass('completed');
-            });
-
-            $('#task-list').append(taskItem);
-
-
+     
             $('#task-input').val('');
         }
+    });
+
+    
+    $('#task-list').on('click', 'li', function() {
+        $(this).toggleClass('completed');
     });
 });
