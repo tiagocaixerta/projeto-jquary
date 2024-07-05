@@ -1,26 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Tarefas</title>
     <style>
-        .task-list li.completed {
+        li.completed {
             text-decoration: line-through;
         }
     </style>
 </head>
 <body>
-    <h2>Lista de Tarefas</h2>
+    <h1>Lista de Tarefas</h1>
     <form id="task-form">
-        <input type="text" id="task-input" placeholder="Digite a tarefa...">
-        <button type="submit">Adicionar</button>
+        <input type="text" id="task-input" placeholder="Adicione uma nova tarefa" required>
+        <button type="submit">Adicionar Tarefa</button>
     </form>
-    <ul id="task-list">
-        <!-- Lista de tarefas será adicionada dinamicamente -->
-    </ul>
+    <ul id="task-list"></ul>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="script.js"></script>
+    <!-- Adicione o jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
